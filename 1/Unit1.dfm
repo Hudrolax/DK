@@ -1,0 +1,125 @@
+object Form1: TForm1
+  Left = 86
+  Top = 184
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Test DBF'
+  ClientHeight = 230
+  ClientWidth = 497
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  Icon.Data = {
+    0000010001002020100000000000E80200001600000028000000200000004000
+    0000010004000000000080020000000000000000000000000000000000000000
+    0000000080000080000000808000800000008000800080800000C0C0C0008080
+    80000000FF0000FF000000FFFF00FF000000FF00FF00FFFF0000FFFFFF007777
+    7777777777777777777777777777777777777777777777777777777777777777
+    7777777777777777777777777777777CCCCCCC777CCCCCC777CC77777777777C
+    CCCCCCC77CCCCCCC77CC77777777777CC77777CC7CC7777CC7CC77777777777C
+    C77777CC7CC7777CC7CC77777777777CC77777CC7CC7777CC7CC77777777777C
+    C77777CC7CC7777CC7CC77777777777CC77777CC7CCCCCCC77CCCCC77777777C
+    C77777CC7CCCCCCC77CCCCC77777777CC77777CC7CC7777CC7CC77777777000C
+    C00000CC0CC0000CC0CC00000000088CCFFFFFCCFCCFFF0CCFCCFFFFFFF0088C
+    CCCCCCCFFCCCCCCCFFCCCCCCCFF0088CCCCCCCFFFCCCCCCFFFCCCCCCCFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF00880FFFFFFFFFFFFFF0FFFFFFFFFFFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF0000000000000000000000000000000000880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF00880FFFFFFFFFFFFFF0FFFFFFFFFFFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF00880FFFFFFFFFFFFFF0FFFFFFFFFFFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF00880FFFFFFFFFFFFFF0FFFFFFFFFFFF00000
+    00000000000000000000000000000880FFFFFFFFFFFFFF0FFFFFFFFFFFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF00880FFFFFFFFFFFFFF0FFFFFFFFFFFF00880
+    FFFFFFFFFFFFFF0FFFFFFFFFFFF0000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    0000000000000000000000000000000000000000000000000000000000000000
+    000000000000000000000000000000000000000000000000000000000000}
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poScreenCenter
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Button1: TButton
+    Left = 416
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Connect'
+    TabOrder = 0
+    OnClick = Button1Click
+  end
+  object DBGrid1: TDBGrid
+    Left = 8
+    Top = 0
+    Width = 481
+    Height = 193
+    DataSource = DataSource1
+    TabOrder = 1
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'MS Sans Serif'
+    TitleFont.Style = []
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 8
+    Top = 200
+    Width = 150
+    Height = 25
+    DataSource = DataSource1
+    VisibleButtons = [nbInsert, nbDelete, nbEdit, nbPost, nbCancel, nbRefresh]
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 256
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Clear'
+    Enabled = False
+    TabOrder = 3
+    OnClick = Button2Click
+  end
+  object CheckBox1: TCheckBox
+    Left = 168
+    Top = 200
+    Width = 81
+    Height = 17
+    Caption = 'Show del'
+    Enabled = False
+    TabOrder = 4
+    OnClick = CheckBox1Click
+  end
+  object Button3: TButton
+    Left = 336
+    Top = 200
+    Width = 75
+    Height = 25
+    Caption = 'Pack'
+    Enabled = False
+    TabOrder = 5
+    OnClick = Button3Click
+  end
+  object DataSource1: TDataSource
+    Left = 8
+  end
+  object MainMenu1: TMainMenu
+    Left = 464
+    Top = 208
+    object File1: TMenuItem
+      Caption = 'File'
+      object Exit1: TMenuItem
+        Caption = 'Exit'
+        OnClick = Exit1Click
+      end
+    end
+    object Help1: TMenuItem
+      Caption = 'Help'
+      OnClick = Help1Click
+    end
+  end
+end
